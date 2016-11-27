@@ -38,8 +38,8 @@ Public Class GenerateTransactionReport
 
     'returns the string we add as the return value
     Private Shared Function GetConnectionString() As String
-        'Return "Server=DESKTOP-KPG72J8;Database=CMPT291_GROUP; Trusted_Connection=True"
-        Return "Server=STEVENPC\LOCALDB;Database=CMPT291_GROUP;Integrated Security=True;Trusted_Connection=True"
+        Return "Server=DESKTOP-KPG72J8;Database=CMPT291_GROUP; Trusted_Connection=True"
+        'Return "Server=STEVENPC\LOCALDB;Database=CMPT291_GROUP;Integrated Security=True;Trusted_Connection=True"
     End Function
 
     Private Sub Year_Click(sender As Object, e As EventArgs) Handles YearLabel.Click

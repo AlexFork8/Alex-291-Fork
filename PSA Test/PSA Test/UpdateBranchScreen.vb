@@ -2,19 +2,6 @@
 Imports System.Data.SqlClient
 Public Class UpdateBranchScreen
 
-    'Dim StreetTextBox As Object
-    'Dim BranchTextBox As Object
-    'Dim AveTextBox As Object
-    'Dim CityTextBox As Object
-    'Dim CountryTextbox As Object
-    'Dim PostalCodeTextBox As Object
-    'Dim PhoneNumberTextBox As Object
-    'Dim BranchIDTextBox As Object
-
-
-    'a query for the data to be updated
-
-
     Private Sub UpdateBranchScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -27,45 +14,114 @@ Public Class UpdateBranchScreen
 
     'handler generated when we create a button. The actual events within the button 
     'handler is defined by us.
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
+
         Dim connectionString As String = GetConnectionString()
 
-        Using connection As New SqlConnection(connectionString)
-            Dim command As SqlCommand = connection.CreateCommand()
-
-            Dim query As String = ""
-            query = "update dbo.Branch set Name = '" & BranchTextBox.Text & "',Address_Street = '" & StreetTextBox.Text & "',Address_Ave= '" & AveTextBox.Text & "',City = '" & CityTextBox.Text & "',
-            Country = '" & CountryTextbox.Text & "',Postal_Code = '" & PostalCodeTextBox.Text & "',Phone_Number = '" & PhoneNumberTextBox.Text & "' where Branch_ID='" & BranchIDTextBox.Text & "'"
+        Dim comma As Integer
 
 
-            Try
-                connection.Open()
-                command.CommandText = query
-                command.ExecuteReader()
+        Dim updateCmd As String = "update dbo.Branch Set "
 
-                'sends our CommandText(query) to the connection at command and executes the query
-                Dim resultQuery = "select Name from dbo.branch"
-                command.CommandText = resultQuery
-                Dim readBranchData As SqlDataReader = command.ExecuteReader
+        If Not BranchTextBox.Text = String.Empty Then
 
-                Do While readBranchData.Read()
-                    Result.Text += readBranchData(0).ToString
-                Loop
+            updateCmd += "Name = '" & BranchTextBox.Text & "'"
+            comma = 1
 
-                Result.Refresh()
+        End If
 
-                readBranchData.Close()
+        If Not StreetTextBox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "Address_Street = '" & StreetTextBox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,Address_Street = '" & StreetTextBox.Text & "'"
+            End If
+        End If
+        If Not AveTextBox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "Address_Ave = '" & AveTextBox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,Address_Ave = '" & AveTextBox.Text & "'"
+            End If
+        End If
+
+        If Not CityTextBox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "City = '" & CityTextBox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,City = '" & CityTextBox.Text & "'"
+            End If
+        End If
+        If Not CountryTextbox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "Country = '" & CountryTextbox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,Country = '" & CountryTextbox.Text & "'"
+            End If
+        End If
+        If Not PostalCodeTextBox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "Postal_Code = '" & PostalCodeTextBox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,Postal_Code = '" & PostalCodeTextBox.Text & "'"
+            End If
+        End If
+
+        If Not PhoneNumberTextBox.Text = String.Empty Then
+            If comma = 0 Then
+                updateCmd += "Phone_Number = '" & PhoneNumberTextBox.Text & "'"
+                comma = 1
+            Else
+                updateCmd += " ,Phone_Number = '" & PhoneNumberTextBox.Text & "'"
+            End If
+        End If
+        Dim flag As Integer = 0
+
+        If BranchIDTextBox.Text = String.Empty Then
+            HiddenMsg.Show()
+            HiddenMsg.ForeColor = Color.Red
+            flag = 1
+
+        Else
+
+            updateCmd += " where Branch_ID ='" & BranchIDTextBox.Text & "'"
+
+        End If
+
+        If flag = 0 Then
+
+            ResultsBox.Items.Add(updateCmd)
+
+            Using connection As SqlConnection = New SqlConnection(connectionString)
+
+                Using command As SqlCommand = New SqlCommand(updateCmd, connection)
+
+                    Try
+                        connection.Open()
+
+                        command.CommandType = CommandType.Text
+
+                        If (command.ExecuteNonQuery().Equals(1)) Then
+                            ResultsBox.Items.Add("Branch info updated")
+                        Else
+                            ResultsBox.Items.Add("Error updating. Try again")
+                        End If
+
+                        'Catch Exception if data u
+                    Catch ex As Exception
+                        Console.WriteLine(ex.Message)
+
+                    End Try
+
+                End Using
                 connection.Close()
-
-
-                'Catch Exception if data u
-            Catch ex As Exception
-                Console.WriteLine(ex.Message)
-
-            End Try
-
-        End Using
-
+            End Using
+        End If
     End Sub
     Private Sub UpdateBranch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

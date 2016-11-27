@@ -109,6 +109,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RentalDetails.Designer.vb">
+      <DependentUpon>RentalDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RentalDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GenerateInventoryReport.designer.vb">
       <DependentUpon>GenerateInventoryReport.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Extras.resx">
       <DependentUpon>Extras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalDetails.resx">
+      <DependentUpon>RentalDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateInventoryReport.resx">
       <DependentUpon>GenerateInventoryReport.vb</DependentUpon>
