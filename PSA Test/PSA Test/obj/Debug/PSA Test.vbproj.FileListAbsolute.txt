@@ -1,5 +1,4 @@
 c:\users\as_ne\documents\visual studio 2015\Projects\PSA Test\PSA Test\bin\Debug\PSA Test.exe.config
-c:\users\as_ne\documents\visual studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA Test.vbprojResolveAssemblyReference.cache
 c:\users\as_ne\documents\visual studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.CarSearch.resources
 c:\users\as_ne\documents\visual studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.CustomerInfo.resources
 c:\users\as_ne\documents\visual studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.Experience.resources
@@ -17,3 +16,5 @@ C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.GenerateInventoryReport.resources
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.GenerateTransactionReport.resources
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.UpdateBranchScreen.resources
+C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.HelpMenu.resources
+C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.RentalDetails.resources

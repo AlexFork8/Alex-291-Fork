@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.PSA_Test.CustomerInfo
+            Me.MainForm = Global.PSA_Test.UpdateBranchScreen
         End Sub
     End Class
 End Namespace

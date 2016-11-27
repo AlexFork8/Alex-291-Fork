@@ -43,8 +43,8 @@ Public Class GenerateInventoryReport
 
     'returns the string we add as the return value
     Private Shared Function GetConnectionString() As String
-        'Return "Server=DESKTOP-KPG72J8;Database=CMPT291_GROUP; Trusted_Connection=True"
-        Return "Server=STEVENPC\LOCALDB;Database=CMPT291_GROUP;Integrated Security=True;Trusted_Connection=True"
+        Return "Server=DESKTOP-KPG72J8;Database=CMPT291_GROUP; Trusted_Connection=True"
+        'Return "Server=STEVENPC\LOCALDB;Database=CMPT291_GROUP;Integrated Security=True;Trusted_Connection=True"
     End Function
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
@@ -188,9 +188,9 @@ Public Class GenerateInventoryReport
                 carQuery += " and R.To_Year>='" + splitDate(0) + "' and R.To_Month>='" + splitDate(1) + "' and R.To_Date>='" + splitYear(0) + "'"
             End If
         End If
-        If flag = 1 Then
-            carQuery += " and Vehicle_ID=Vehicle_ID1"
-        End If
+        'If flag = 1 Then
+        'carQuery += " and Vehicle_ID=Vehicle_ID1"
+        'End If
 
         'setting date picker default values to ' ' for checking in if statements.
         FromDatePicker.Format = DateTimePickerFormat.Custom

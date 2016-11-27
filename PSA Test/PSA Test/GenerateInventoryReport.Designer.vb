@@ -45,76 +45,83 @@ Partial Class GenerateInventoryReport
         Me.VehicleMakeCombobox = New System.Windows.Forms.ComboBox()
         Me.VehicleModelCombobox = New System.Windows.Forms.ComboBox()
         Me.SearchButton = New System.Windows.Forms.Button()
-        Me.GenerateInventoryReportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridResults = New System.Windows.Forms.DataGridView()
         Me.DataGridResultsRented = New System.Windows.Forms.DataGridView()
         Me.AvailableCarsLabel = New System.Windows.Forms.Label()
         Me.RentedCarsLabel = New System.Windows.Forms.Label()
-        CType(Me.GenerateInventoryReportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GenerateInventoryReportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridResults, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridResultsRented, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GenerateInventoryReportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 196)
+        Me.Label2.Location = New System.Drawing.Point(50, 302)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 13)
+        Me.Label2.Size = New System.Drawing.Size(85, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "From Date"
         '
         'VehicleID
         '
         Me.VehicleID.AutoSize = True
-        Me.VehicleID.Location = New System.Drawing.Point(33, 102)
+        Me.VehicleID.Location = New System.Drawing.Point(50, 157)
+        Me.VehicleID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VehicleID.Name = "VehicleID"
-        Me.VehicleID.Size = New System.Drawing.Size(56, 13)
+        Me.VehicleID.Size = New System.Drawing.Size(82, 20)
         Me.VehicleID.TabIndex = 2
         Me.VehicleID.Text = "Vehicle ID"
         '
         'AccountNumber
         '
         Me.AccountNumber.AutoSize = True
-        Me.AccountNumber.Location = New System.Drawing.Point(317, 11)
+        Me.AccountNumber.Location = New System.Drawing.Point(476, 17)
+        Me.AccountNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AccountNumber.Name = "AccountNumber"
-        Me.AccountNumber.Size = New System.Drawing.Size(87, 13)
+        Me.AccountNumber.Size = New System.Drawing.Size(128, 20)
         Me.AccountNumber.TabIndex = 3
         Me.AccountNumber.Text = "Account Number"
         '
         'FirstNameLabel
         '
         Me.FirstNameLabel.AutoSize = True
-        Me.FirstNameLabel.Location = New System.Drawing.Point(34, 13)
+        Me.FirstNameLabel.Location = New System.Drawing.Point(51, 20)
+        Me.FirstNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.FirstNameLabel.Name = "FirstNameLabel"
-        Me.FirstNameLabel.Size = New System.Drawing.Size(57, 13)
+        Me.FirstNameLabel.Size = New System.Drawing.Size(86, 20)
         Me.FirstNameLabel.TabIndex = 4
         Me.FirstNameLabel.Text = "First Name"
         '
         'PhoneNumber
         '
         Me.PhoneNumber.AutoSize = True
-        Me.PhoneNumber.Location = New System.Drawing.Point(33, 72)
+        Me.PhoneNumber.Location = New System.Drawing.Point(50, 111)
+        Me.PhoneNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PhoneNumber.Name = "PhoneNumber"
-        Me.PhoneNumber.Size = New System.Drawing.Size(78, 13)
+        Me.PhoneNumber.Size = New System.Drawing.Size(115, 20)
         Me.PhoneNumber.TabIndex = 5
         Me.PhoneNumber.Text = "Phone Number"
         '
         'VehicleType
         '
         Me.VehicleType.AutoSize = True
-        Me.VehicleType.Location = New System.Drawing.Point(33, 164)
+        Me.VehicleType.Location = New System.Drawing.Point(50, 252)
+        Me.VehicleType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VehicleType.Name = "VehicleType"
-        Me.VehicleType.Size = New System.Drawing.Size(74, 13)
+        Me.VehicleType.Size = New System.Drawing.Size(108, 20)
         Me.VehicleType.TabIndex = 6
         Me.VehicleType.Text = "Vehicle Model"
         '
         'VehicleMake
         '
         Me.VehicleMake.AutoSize = True
-        Me.VehicleMake.Location = New System.Drawing.Point(33, 133)
+        Me.VehicleMake.Location = New System.Drawing.Point(50, 205)
+        Me.VehicleMake.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.VehicleMake.Name = "VehicleMake"
-        Me.VehicleMake.Size = New System.Drawing.Size(72, 13)
+        Me.VehicleMake.Size = New System.Drawing.Size(104, 20)
         Me.VehicleMake.TabIndex = 7
         Me.VehicleMake.Text = "Vehicle Make"
         '
@@ -122,121 +129,137 @@ Partial Class GenerateInventoryReport
         '
         Me.ReportResultsBox.FormattingEnabled = True
         Me.ReportResultsBox.HorizontalScrollbar = True
-        Me.ReportResultsBox.Location = New System.Drawing.Point(36, 258)
+        Me.ReportResultsBox.ItemHeight = 20
+        Me.ReportResultsBox.Location = New System.Drawing.Point(54, 397)
+        Me.ReportResultsBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ReportResultsBox.Name = "ReportResultsBox"
-        Me.ReportResultsBox.Size = New System.Drawing.Size(263, 173)
+        Me.ReportResultsBox.Size = New System.Drawing.Size(392, 264)
         Me.ReportResultsBox.TabIndex = 9
         '
         'AccountNumberTextbox
         '
-        Me.AccountNumberTextbox.Location = New System.Drawing.Point(436, 8)
+        Me.AccountNumberTextbox.Location = New System.Drawing.Point(654, 12)
+        Me.AccountNumberTextbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AccountNumberTextbox.Name = "AccountNumberTextbox"
-        Me.AccountNumberTextbox.Size = New System.Drawing.Size(298, 20)
+        Me.AccountNumberTextbox.Size = New System.Drawing.Size(445, 26)
         Me.AccountNumberTextbox.TabIndex = 12
         '
         'FirstNameTextBox
         '
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(149, 10)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(224, 15)
+        Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(149, 20)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(222, 26)
         Me.FirstNameTextBox.TabIndex = 13
         '
         'PhoneTextbox
         '
-        Me.PhoneTextbox.Location = New System.Drawing.Point(149, 69)
+        Me.PhoneTextbox.Location = New System.Drawing.Point(224, 106)
+        Me.PhoneTextbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PhoneTextbox.Name = "PhoneTextbox"
-        Me.PhoneTextbox.Size = New System.Drawing.Size(149, 20)
+        Me.PhoneTextbox.Size = New System.Drawing.Size(222, 26)
         Me.PhoneTextbox.TabIndex = 14
         '
         'VehicleIDTextbox
         '
-        Me.VehicleIDTextbox.Location = New System.Drawing.Point(150, 99)
+        Me.VehicleIDTextbox.Location = New System.Drawing.Point(225, 152)
+        Me.VehicleIDTextbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.VehicleIDTextbox.Name = "VehicleIDTextbox"
-        Me.VehicleIDTextbox.Size = New System.Drawing.Size(149, 20)
+        Me.VehicleIDTextbox.Size = New System.Drawing.Size(222, 26)
         Me.VehicleIDTextbox.TabIndex = 15
         '
         'FromDatePicker
         '
-        Me.FromDatePicker.Location = New System.Drawing.Point(150, 191)
+        Me.FromDatePicker.Location = New System.Drawing.Point(225, 294)
+        Me.FromDatePicker.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FromDatePicker.Name = "FromDatePicker"
         Me.FromDatePicker.ShowCheckBox = True
-        Me.FromDatePicker.Size = New System.Drawing.Size(149, 20)
+        Me.FromDatePicker.Size = New System.Drawing.Size(222, 26)
         Me.FromDatePicker.TabIndex = 18
         Me.FromDatePicker.Value = New Date(2016, 11, 20, 0, 0, 0, 0)
         '
         'ToDateLabel
         '
         Me.ToDateLabel.AutoSize = True
-        Me.ToDateLabel.Location = New System.Drawing.Point(33, 225)
+        Me.ToDateLabel.Location = New System.Drawing.Point(50, 346)
+        Me.ToDateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ToDateLabel.Name = "ToDateLabel"
-        Me.ToDateLabel.Size = New System.Drawing.Size(46, 13)
+        Me.ToDateLabel.Size = New System.Drawing.Size(66, 20)
         Me.ToDateLabel.TabIndex = 8
         Me.ToDateLabel.Text = "To Date"
         '
         'ToDatePicker
         '
-        Me.ToDatePicker.Location = New System.Drawing.Point(150, 221)
+        Me.ToDatePicker.Location = New System.Drawing.Point(225, 340)
+        Me.ToDatePicker.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ToDatePicker.Name = "ToDatePicker"
         Me.ToDatePicker.ShowCheckBox = True
-        Me.ToDatePicker.Size = New System.Drawing.Size(149, 20)
+        Me.ToDatePicker.Size = New System.Drawing.Size(222, 26)
         Me.ToDatePicker.TabIndex = 19
         Me.ToDatePicker.Value = New Date(2016, 11, 20, 0, 0, 0, 0)
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(497, 438)
+        Me.SaveButton.Location = New System.Drawing.Point(746, 674)
+        Me.SaveButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(75, 23)
+        Me.SaveButton.Size = New System.Drawing.Size(112, 35)
         Me.SaveButton.TabIndex = 20
         Me.SaveButton.Text = "Back"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(659, 438)
+        Me.BackButton.Location = New System.Drawing.Point(988, 674)
+        Me.BackButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(75, 23)
+        Me.BackButton.Size = New System.Drawing.Size(112, 35)
         Me.BackButton.TabIndex = 21
         Me.BackButton.Text = "Save to File"
         Me.BackButton.UseVisualStyleBackColor = True
         '
         'SurnameTextbox
         '
-        Me.SurnameTextbox.Location = New System.Drawing.Point(150, 39)
+        Me.SurnameTextbox.Location = New System.Drawing.Point(225, 60)
+        Me.SurnameTextbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SurnameTextbox.Name = "SurnameTextbox"
-        Me.SurnameTextbox.Size = New System.Drawing.Size(149, 20)
+        Me.SurnameTextbox.Size = New System.Drawing.Size(222, 26)
         Me.SurnameTextbox.TabIndex = 23
         '
         'SurnameLabel
         '
         Me.SurnameLabel.AutoSize = True
-        Me.SurnameLabel.Location = New System.Drawing.Point(34, 42)
+        Me.SurnameLabel.Location = New System.Drawing.Point(51, 65)
+        Me.SurnameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.SurnameLabel.Name = "SurnameLabel"
-        Me.SurnameLabel.Size = New System.Drawing.Size(49, 13)
+        Me.SurnameLabel.Size = New System.Drawing.Size(74, 20)
         Me.SurnameLabel.TabIndex = 22
         Me.SurnameLabel.Text = "Surname"
         '
         'VehicleMakeCombobox
         '
         Me.VehicleMakeCombobox.FormattingEnabled = True
-        Me.VehicleMakeCombobox.Location = New System.Drawing.Point(150, 130)
+        Me.VehicleMakeCombobox.Location = New System.Drawing.Point(225, 200)
+        Me.VehicleMakeCombobox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.VehicleMakeCombobox.Name = "VehicleMakeCombobox"
-        Me.VehicleMakeCombobox.Size = New System.Drawing.Size(149, 21)
+        Me.VehicleMakeCombobox.Size = New System.Drawing.Size(222, 28)
         Me.VehicleMakeCombobox.TabIndex = 24
         '
         'VehicleModelCombobox
         '
         Me.VehicleModelCombobox.FormattingEnabled = True
-        Me.VehicleModelCombobox.Location = New System.Drawing.Point(150, 161)
+        Me.VehicleModelCombobox.Location = New System.Drawing.Point(225, 248)
+        Me.VehicleModelCombobox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.VehicleModelCombobox.Name = "VehicleModelCombobox"
-        Me.VehicleModelCombobox.Size = New System.Drawing.Size(149, 21)
+        Me.VehicleModelCombobox.Size = New System.Drawing.Size(222, 28)
         Me.VehicleModelCombobox.TabIndex = 25
         '
         'SearchButton
         '
-        Me.SearchButton.Location = New System.Drawing.Point(317, 438)
+        Me.SearchButton.Location = New System.Drawing.Point(476, 674)
+        Me.SearchButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SearchButton.Name = "SearchButton"
-        Me.SearchButton.Size = New System.Drawing.Size(75, 23)
+        Me.SearchButton.Size = New System.Drawing.Size(112, 35)
         Me.SearchButton.TabIndex = 26
         Me.SearchButton.Text = "Search"
         Me.SearchButton.UseVisualStyleBackColor = True
@@ -244,42 +267,46 @@ Partial Class GenerateInventoryReport
         'DataGridResults
         '
         Me.DataGridResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridResults.Location = New System.Drawing.Point(317, 57)
+        Me.DataGridResults.Location = New System.Drawing.Point(476, 88)
+        Me.DataGridResults.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridResults.Name = "DataGridResults"
-        Me.DataGridResults.Size = New System.Drawing.Size(417, 181)
+        Me.DataGridResults.Size = New System.Drawing.Size(626, 278)
         Me.DataGridResults.TabIndex = 27
         '
         'DataGridResultsRented
         '
         Me.DataGridResultsRented.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridResultsRented.Location = New System.Drawing.Point(317, 259)
+        Me.DataGridResultsRented.Location = New System.Drawing.Point(476, 398)
+        Me.DataGridResultsRented.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridResultsRented.Name = "DataGridResultsRented"
-        Me.DataGridResultsRented.Size = New System.Drawing.Size(417, 173)
+        Me.DataGridResultsRented.Size = New System.Drawing.Size(626, 266)
         Me.DataGridResultsRented.TabIndex = 28
         '
         'AvailableCarsLabel
         '
         Me.AvailableCarsLabel.AutoSize = True
-        Me.AvailableCarsLabel.Location = New System.Drawing.Point(317, 39)
+        Me.AvailableCarsLabel.Location = New System.Drawing.Point(476, 60)
+        Me.AvailableCarsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AvailableCarsLabel.Name = "AvailableCarsLabel"
-        Me.AvailableCarsLabel.Size = New System.Drawing.Size(74, 13)
+        Me.AvailableCarsLabel.Size = New System.Drawing.Size(109, 20)
         Me.AvailableCarsLabel.TabIndex = 29
         Me.AvailableCarsLabel.Text = "Available Cars"
         '
         'RentedCarsLabel
         '
         Me.RentedCarsLabel.AutoSize = True
-        Me.RentedCarsLabel.Location = New System.Drawing.Point(317, 244)
+        Me.RentedCarsLabel.Location = New System.Drawing.Point(476, 375)
+        Me.RentedCarsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.RentedCarsLabel.Name = "RentedCarsLabel"
-        Me.RentedCarsLabel.Size = New System.Drawing.Size(66, 13)
+        Me.RentedCarsLabel.Size = New System.Drawing.Size(99, 20)
         Me.RentedCarsLabel.TabIndex = 30
         Me.RentedCarsLabel.Text = "Rented Cars"
         '
         'GenerateInventoryReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 471)
+        Me.ClientSize = New System.Drawing.Size(1156, 725)
         Me.Controls.Add(Me.RentedCarsLabel)
         Me.Controls.Add(Me.AvailableCarsLabel)
         Me.Controls.Add(Me.DataGridResultsRented)
@@ -306,11 +333,12 @@ Partial Class GenerateInventoryReport
         Me.Controls.Add(Me.AccountNumber)
         Me.Controls.Add(Me.VehicleID)
         Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "GenerateInventoryReport"
         Me.Text = "Inventory Reporting"
-        CType(Me.GenerateInventoryReportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridResults, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridResultsRented, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GenerateInventoryReportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

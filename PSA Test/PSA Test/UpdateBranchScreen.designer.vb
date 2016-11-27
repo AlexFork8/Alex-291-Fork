@@ -38,8 +38,9 @@ Partial Class UpdateBranchScreen
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Result = New System.Windows.Forms.TextBox()
+        Me.ResultsBox = New System.Windows.Forms.ListBox()
+        Me.UpdateButton = New System.Windows.Forms.Button()
+        Me.HiddenMsg = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BranchTextBox
@@ -170,29 +171,43 @@ Partial Class UpdateBranchScreen
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Phone Number"
         '
-        'Button1
+        'ResultsBox
         '
-        Me.Button1.Location = New System.Drawing.Point(306, 448)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Update"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ResultsBox.FormattingEnabled = True
+        Me.ResultsBox.HorizontalScrollbar = True
+        Me.ResultsBox.ItemHeight = 20
+        Me.ResultsBox.Location = New System.Drawing.Point(678, 142)
+        Me.ResultsBox.Name = "ResultsBox"
+        Me.ResultsBox.Size = New System.Drawing.Size(460, 184)
+        Me.ResultsBox.TabIndex = 18
         '
-        'Result
+        'UpdateButton
         '
-        Me.Result.Location = New System.Drawing.Point(530, 445)
-        Me.Result.Name = "Result"
-        Me.Result.Size = New System.Drawing.Size(423, 26)
-        Me.Result.TabIndex = 17
+        Me.UpdateButton.Location = New System.Drawing.Point(507, 217)
+        Me.UpdateButton.Name = "UpdateButton"
+        Me.UpdateButton.Size = New System.Drawing.Size(89, 43)
+        Me.UpdateButton.TabIndex = 19
+        Me.UpdateButton.Text = "Update"
+        Me.UpdateButton.UseVisualStyleBackColor = True
+        '
+        'HiddenMsg
+        '
+        Me.HiddenMsg.AutoSize = True
+        Me.HiddenMsg.Location = New System.Drawing.Point(507, 37)
+        Me.HiddenMsg.Name = "HiddenMsg"
+        Me.HiddenMsg.Size = New System.Drawing.Size(313, 20)
+        Me.HiddenMsg.TabIndex = 20
+        Me.HiddenMsg.Text = "Must enter Branch ID to upate branch data"
+        Me.HiddenMsg.Visible = False
         '
         'UpdateBranchScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1291, 537)
-        Me.Controls.Add(Me.Result)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.HiddenMsg)
+        Me.Controls.Add(Me.UpdateButton)
+        Me.Controls.Add(Me.ResultsBox)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -210,7 +225,7 @@ Partial Class UpdateBranchScreen
         Me.Controls.Add(Me.PhoneNumberTextBox)
         Me.Controls.Add(Me.BranchTextBox)
         Me.Name = "UpdateBranchScreen"
-        Me.Text = "UpdateBranchScreen"
+        Me.Text = "Update Branch"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -232,6 +247,7 @@ Partial Class UpdateBranchScreen
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Result As TextBox
+    Friend WithEvents ResultsBox As ListBox
+    Friend WithEvents UpdateButton As Button
+    Friend WithEvents HiddenMsg As Label
 End Class
