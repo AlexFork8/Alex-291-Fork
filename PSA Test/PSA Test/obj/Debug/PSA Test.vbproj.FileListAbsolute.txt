@@ -17,3 +17,7 @@ C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.GenerateInventoryReport.resources
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.GenerateTransactionReport.resources
 C:\Users\as_ne\Documents\Visual Studio 2015\Projects\PSA Test\PSA Test\obj\Debug\PSA_Test.UpdateBranchScreen.resources
+C:\Users\as_ne\Documents\GitHub\Cmpt-291-Car-Rental\PSA Test\PSA Test\bin\Debug\PSA Test.exe.config
+C:\Users\as_ne\Documents\GitHub\Cmpt-291-Car-Rental\PSA Test\PSA Test\obj\Debug\PSA Test.exe
+C:\Users\as_ne\Documents\GitHub\Cmpt-291-Car-Rental\PSA Test\PSA Test\obj\Debug\PSA Test.xml
+C:\Users\as_ne\Documents\GitHub\Cmpt-291-Car-Rental\PSA Test\PSA Test\obj\Debug\PSA Test.pdb
